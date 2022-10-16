@@ -11,6 +11,40 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 		}
+		#ball{
+			height: 25px;
+			width: 25px;
+			position: relative;
+			left: 400;
+			top: 300;
+			background-image: url(football.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation-name: throw;
+			animation-iteration-count: infinite;
+			animation-duration: 7s;
+			position: relative;
+		}
+		@keyframes throw{
+			0%{
+				left: 400px;
+				top: 290px;}
+			
+			35%{
+				left: 250px;
+				top: 390px;
+			
+			}
+			
+			60%{
+			left: 50px;top: 390px;}
+
+			100%{
+				left: 50px;
+				top: 350px;
+			}
+
+		}
 
 		#jacob{
 			height: 100px;
@@ -18,18 +52,52 @@
 			position: relative;
 			left: 400px;
 			top: 200px;
-			background-image: url(jacob.jpg);
+			background-image: url(jacob.png);
 			background-size: contain;
 			background-repeat: no-repeat;
-
 			animation-name: catch;
 			animation-iteration-count: infinite;
 			animation-duration: 7s;
+			position: relative;
+
+
+
+		}
+		@keyframes catch{
+			0%{
+				left: 400px;
+				top: 200px;
+
+
+			}
+			
+			10%{
+				left: 300px;
+				top: 200px;
+			}
+			
+			
+			35%{
+				left: 250px;
+				top: 400px;
+			
+			}
+			
+			60%{
+			left: 50px;top: 400px;}
+
+
+			100%{
+				left: 50px;
+				top: 350px;
+			}
+
 
 		}
 	</style>
 </head>
 <body>
 <div id="jacob"></div>
+<div id="ball"></div>
 </body>
 </html>
