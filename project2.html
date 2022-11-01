@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.football{
+			height: 100px;
+			width: 100px;
+			background-image: url(football.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+		}
+		.football:hover{
+			background-color: purple;
+			rotate: 180°;
+			
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="score"></div>
+<script type="text/javascript">
+	var number = 0
+	function makeFootball (){
+		var football = document.createElement("div")
+		document.body.appendChild(football);
+		football.classList.add("football")
+		number = number +1
+		score.innerText = number
+	}
+	setInterval(makeFootball, 500)
+</script>
+
+</body>
+</html>
