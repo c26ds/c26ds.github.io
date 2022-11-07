@@ -4,25 +4,56 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+
 </head>
 <body>
+	<main>
+	    </main>
+	  
+	<script type="text/javascript">
+		let r =255;
+let g = 255;
+let b = 255;
 
-<script type="text/javascript">
-	let name = 77;
-	let something = 100;
-	var score = 0
 
-	function sayHi (input){
-		console.log("hi" + input + "!")
-	}
-	sayHi("daya");
+function setup() {
+  createCanvas(500, 500);
+  background(50,150,210)
+}
 
-	console.log(name)
-
-	function scoreplus (input){
-		console.log(0 + 1)
-	}
-	score()
-</script>
+function draw() {
+  //background(50,150,210);
+  noStroke();
+  console.log(mouseX + ": mouseX");
+  console.log(mouseY + ": mouseY");
+  //fill gives shape a color
+  fill(r,g,b)
+ 
+}
+function mouseDragged(){
+   circle(mouseX,mouseY,20)
+}
+function keyTyped(){
+  if(key === 'c'){
+     background(50,150,210)
+  }
+  if(key === '1'){
+    r = 255
+    g = 0
+    b = 0
+  }
+  if(key === '2'){
+    r = 0
+    g = 255
+    b = 0
+}
+}
+	</script>
 </body>
+
 </html>
