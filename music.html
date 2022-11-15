@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var switchy = true;
+		document.addEventListener("click", function(){
+			console.log("youre gonna havve a great day")
+			if (switchy ==true) {
+				audio.play()
+				switchy = false;
+			}
+			else if (switchy == false)
+				audio.pause()
+			switchy = true;
+		})
+	</script>
+
+</body>
+</html>
