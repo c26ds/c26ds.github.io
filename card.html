@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<audio id="song" src=""></audio>
+<script type="text/javascript">
+	var clicks =0;
+	document.addEventlistener("click",
+		function(){
+			clicks = click+1
+			console.log(clicks)
+
+			if (clicks%2 == 1) {
+				document.body.style.backgroundImage="url(lukaslick.jpg)";
+				song.play()
+			}
+			if (clicks%2 == 0) {
+				document.body.style.backgroundImage="url()";
+				song.pause()
+
+			}
+
+		})
+</script>
+</script>
+</body>
+</html>
