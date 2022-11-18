@@ -4,23 +4,35 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style type="text/css">
+		#picture{
+			width: 250px;
+			height: 500px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			
+		}
+	</style>
 </head>
 <body>
-	<audio id="song" src=""></audio>
+	<!-- <audio id="song" src=""></audio> -->
+<center><div id="picture"></div></center>
+
 <script type="text/javascript">
 	var clicks =0;
-	document.addEventlistener("click",
+	document.addEventListener("click",
 		function(){
-			clicks = click+1
+			clicks = clicks+1
 			console.log(clicks)
 
 			if (clicks%2 == 1) {
-				document.body.style.backgroundImage="url(lukaslick.jpg)";
-				song.play()
+				picture.style.backgroundImage= "url(lukaslick.png)";
+				// song.play()
 			}
 			if (clicks%2 == 0) {
-				document.body.style.backgroundImage="url()";
-				song.pause()
+				picture.style.backgroundImage= "url(rainyday.jpg)";
+				// song.pause()
 
 			}
 
