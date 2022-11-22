@@ -6,19 +6,25 @@
 	<title></title>
 	<style type="text/css">
 		#picture{
-			width: 250px;
-			height: 500px;
+			width: 500px;
+			height: 250px;
+			left: 400px;
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
 			
 		}
+		body{
+			background-color: purple;
+
+		}
+
+
 	</style>
 </head>
 <body>
 	<!-- <audio id="song" src=""></audio> -->
 <center><div id="picture"></div></center>
-
 <script type="text/javascript">
 	var clicks =0;
 	document.addEventListener("click",
@@ -27,11 +33,11 @@
 			console.log(clicks)
 
 			if (clicks%2 == 1) {
-				picture.style.backgroundImage= "url(lukaslick.png)";
+				picture.style.backgroundImage= "url(play.jpg)";
 				// song.play()
 			}
 			if (clicks%2 == 0) {
-				picture.style.backgroundImage= "url(rainyday.jpg)";
+				picture.style.backgroundImage= "url(pause.jpg)";
 				// song.pause()
 
 			}
