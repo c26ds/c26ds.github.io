@@ -23,7 +23,7 @@
 	</style>
 </head>
 <body>
-	<!-- <audio id="song" src=""></audio> -->
+	<audio id="song" src="stirfry.mp3"></audio>
 <center><div id="picture"></div></center>
 <script type="text/javascript">
 	var clicks =0;
@@ -34,16 +34,16 @@
 
 			if (clicks%2 == 1) {
 				picture.style.backgroundImage= "url(play.jpg)";
-				// song.play()
+				song.play()
 			}
 			if (clicks%2 == 0) {
 				picture.style.backgroundImage= "url(pause.jpg)";
-				// song.pause()
+				song.pause()
 
 			}
 
 		})
 </script>
-</script>
+
 </body>
 </html>
