@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		
+		.heart{
+			width: 100px;
+			height: 100px;
+			background-image: url(heart2.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			z-index: -1;
+			
+		}
+
+		body{
+			background-color: rgb(200, 200, 2000);
+		}
+		#box{
+			width: 400px;
+			height: 200px;
+			border: 1px solid black;
+			font-size: 50px;
+			z-index: 1;
+
+		}
+		#image{
+			background-image: url(jamie.png);
+			height: 400px;
+			width: 400px;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div id="heart"></div>
+	<div id="box"></div></div></center>
+	<div id="image"></div></div></center>
+
+	<script type="text/javascript">
+		document.addEventListener("mousemove", function(event){ 
+				var heart = document.createElement('div');
+				document.body.appendChild(heart);
+				heart.classList.add('heart');
+				heart.style.left= event.clientX + "px";
+				heart.style.top=event.clientY +"px";
+
+				function disappear (){
+					heart.classList.remove('heart');
+					// heart.style.transition="2s";
+				}
+
+				setTimeout(disappear, 500)
+
+
+		})
+
+		var compliments = ["Best lax attacker I know" , " Great smile ", " Crispest Daps", " ♡"]
+
+	box.addEventListener("click", function(){
+		var randomNumber = Math.round(Math.random()*3);
+		box.innerText = compliments[randomNumber];
+		console.log(randomNumber)
+	})
+
+
+
+	</script>
+
+</body>
+</html>

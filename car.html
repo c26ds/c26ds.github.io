@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		
+
+		#buggy{
+			width:100px;
+			height:100px;
+			background-color:blue;
+			left:10px;
+			position:absolute;
+		}
+/*		style the div*/
+	</style>
+</head>
+<body>
+
+	<div id="buggy"></div>
+	<!-- making a div -->
+
+	<script type="text/javascript">
+		buggy.style.left = "0px";
+		// setting position of the buggy
+
+		 var x = parseInt(buggy.style.left);
+		 // making variable of the position of the buggy
+
+		document.addEventListener("keydown", function(event){
+			console.log(x)
+			x = x+10;
+			// when key pressed change the x coordinate by ten px
+
+			buggy.style.left = x +"px";
+
+		// resetting the buggy
+
+
+		})
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+Make a div of a car and style it
+add an event listener for on key pressed
+when the key is pressed change the x coordinate of the div ten px to the left
+add an event listener for on key pressed
+when the key is pressed change the x coordinate of the div ten px to the right
+Figure out how to make it only when the arrow key is pressed
+
+
