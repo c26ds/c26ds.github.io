@@ -1,117 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dodge Game</title>
-    <style>
-        #character {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background-color: blue;
-        }
-        
-        .object {
-            position: absolute;
-            top: -50px;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-        }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style type="text/css">
+      p{
+        background-color: rgba(1, 1, 1, .50);
+      }
     </style>
-</head>
-<body>
-    <div id="character"></div>
-    <script>
-        // Character object
-        var character = document.getElementById('character');
-        var characterLeft = 50; // Initial position
-        var characterTop = 50; // Initial position
-        var characterSpeed = 10; // Movement speed
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      
+        <section data-background-size="contain" data-background-image="spokes.png"></section>
+       
         
-        // Object creation
-        var objects = [];
-        var objectSpeed = 5; // Object movement speed
-        var objectInterval = 1000; // Object spawn interval
         
-        function createObject() {
-            var object = document.createElement('div');
-            object.classList.add('object');
-            object.style.left = Math.random() * 90 + '%'; // Random position
-            document.body.appendChild(object);
-            objects.push(object);
-        }
+
         
-        function moveObjects() {
-            for (var i = 0; i < objects.length; i++) {
-                var object = objects[i];
-                var top = parseInt(object.style.top);
+
+        
                 
-                if (top > window.innerHeight) {
-                    object.parentNode.removeChild(object);
-                    objects.splice(i, 1);
-                } else {
-                    object.style.top = (top + objectSpeed) + 'px';
-                    if (checkCollision(object)) {
-                        endGame();
-                    }
-                }
-            }
-        }
-        
-        function checkCollision(object) {
-            var characterRect = character.getBoundingClientRect();
-            var objectRect = object.getBoundingClientRect();
-            
-            return (
-                characterRect.top < objectRect.bottom &&
-                characterRect.bottom > objectRect.top &&
-                characterRect.left < objectRect.right &&
-                characterRect.right > objectRect.left
-            );
-        }
-        
-        function endGame() {
-            clearInterval(objectIntervalId);
-            document.removeEventListener('keydown', moveCharacter);
-            alert('Game Over!');
-        }
-        
-        function moveCharacter(event) {
-            var key = event.keyCode;
-            
-            switch (key) {
-                case 37: // Left arrow key
-                    characterLeft -= characterSpeed;
-                    break;
-                case 39: // Right arrow key
-                    characterLeft += characterSpeed;
-                    break;
-                case 38: // Up arrow key
-                    characterTop -= characterSpeed;
-                    break;
-                case 40: // Down arrow key
-                    characterTop += characterSpeed;
-                    break;
-            }
-            
-            character.style.left = characterLeft + 'px';
-            character.style.top = characterTop + 'px';
-        }
-        
-        // Event listeners
-        document.addEventListener('keydown', moveCharacter);
-        
-        // Game loop
-        var objectIntervalId = setInterval(function() {
-            createObject();
-        }, objectInterval);
-        
-        setInterval(function() {
-            moveObjects();
-        }, 50);
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
     </script>
-</body>
+  </body>
 </html>
