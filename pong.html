@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.paddle{
+			height: 500px;
+			width: 150px;
+			background-color: darkred;
+			z-index: 10;
+			position: absolute;
+		}
+		#paddle1{
+			left:10%;
+			transition:.2s;
+		}
+
+		#paddle2{
+			left:90%;
+		}
+		#table{
+			background-image: url(pingpong.png);
+			width: 100%;
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+			z-index: -1;
+		}
+		#ob1{
+			width: 200px;
+			height: 600px;
+			background-color: darkred;
+			top: 330px;
+			left: 1050px;
+			position: absolute;
+		}
+		#ob2{
+			width: 200px;
+			height: 600px;
+			background-color: darkred;
+			top: 330px;
+			left: 2100px;
+			position: absolute;
+		}
+		#wall1{
+			width: 1254px;
+			height: 200px;
+			background-color: lightslategrey;
+			top: 130px;
+			left: 1050px;
+			position: absolute;
+		}
+		#wall2{
+			width: 1254px;
+			height: 200px;
+			background-color: lightslategrey;
+			top: 930px;
+			left: 1050px;
+			position: absolute;
+
+
+		
+	</style>
+</head>
+<body>
+
+<!-- <div class="ob" id="ob1"></div> -->
+
+
+<div id="table">
+<div class="paddle" id="paddle1"></div>
+<div class="paddle"  id="paddle2"></div>
+</div>
+<script type="text/javascript">
+	
+		//this makes the buggy 0 pixles from the left side of the screen//
+		paddle1.style.top = "50%";
+		paddle2.style.top = "50%";
+			//This sets x to be equal to how far the buggy is from the left (0px)//
+		 var y = parseInt(paddle1.style.top);
+		 var y = parseInt(paddle2.style.top);
+
+		
+		 //this "listens" to see when any key is pressed//
+		document.addEventListener("keydown", function(event){
+			
+			//this increases x any time a key is pressed/
+			//x = x+10;
+			//this updates how far the buggy is from the left to equal the current x//
+			//buggy.style.left = x +"px";
+		if (event.code === "ArrowDown"){
+			y = y+75;
+			paddle1.style.top = y +"px";
+	
+  		} 
+  		else if (event.code === "ArrowUp"){
+ 		 	y = y-75;
+			paddle1.style.top = y +"px";
+	
+
+		  }
+
+		
+		})
+		document.addEventListener("mousemove", function(event){
+
+paddle2.style.top=event.clientY +"px";
+	})
+	
+</script>
+<!-- <div class="ob" id="ob2"></div> -->
+<!-- <div id="wall1"></div>
+<div  id="wall2"></div> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+

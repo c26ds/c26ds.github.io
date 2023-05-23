@@ -1,48 +1,23 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-
-	<style>
-		
-
-		#buggy{
-			width:100px;
-			height:100px;
-			background-color:blue;
-			left:10px;
-			position:absolute;
+	<style type="text/css">
+		.person{
+			border-radius:10%;
+			height: 200px;
+			width: 200px;
+			background-color: blue;
+			display:inline-block;
+			margin:5px;
 		}
-/*		style the div*/
 	</style>
 </head>
 <body>
-
-	<div id="buggy"></div>
-	<!-- making a div -->
-
-	<script type="text/javascript">
-		buggy.style.left = "0px";
-		// setting position of the buggy
-
-		 var x = parseInt(buggy.style.left);
-		 // making variable of the position of the buggy
-
-		document.addEventListener("keydown", function(event){
-			console.log(x)
-			x = x+10;
-			// when key pressed change the x coordinate by ten px
-
-			buggy.style.left = x +"px";
-
-		// resetting the buggy
-
-
-		})
-
-
-	</script>
-
+<div class="person"></div>
+<div class="person"></div>
+<div class="person"></div>
 </body>
 </html>

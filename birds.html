@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.bird{
+			width: 100px;
+			height: 100px;
+			background-image: url(ufo.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			font-size: 50px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script type="text/javascript">
+		function flock (x){
+			var bird = document.createElement("div")
+			document.body.appendChild(bird);
+			bird.classList.add("bird")
+			bird.innerText =x
+			bird.addEventListener("click", function(){
+				bird.style.opacity="0";
+			})
+
+		}
+		for (var i=0; i<100; i=i+1){
+			flock("daya")
+		}
+			
+
+
+
+
+
+
+			</script>
+
+
+</body>
+</html>
