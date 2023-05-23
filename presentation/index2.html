@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style type="text/css">
+			p{
+				background-color: rgba(1, 1, 1, .50);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><p>how many far can you keep going?</section>
+				<section><p>these puzzles won't all have hints</p></section>
+				<section data-background-size="contain" data-background-image="spokes.png"><p></p></section>
+				<section data-background-size="contain" data-background-image="thing.png"></section>
+				
+
+
+
+								<section><p>now put the numbers into this lock and add the last password at the end</p>
+					<a href="index2.html"><center><div id="link" style="opacity: 0.0; width: 400px; height: 200px;">link to next page</div></center></a>
+
+					<input id="something"></input>
+					<button id="button">submit</button>
+
+
+
+						<script type="text/javascript">
+							button.addEventListener("click", function(){
+								if (something.value==242547){
+									
+									link.style.opacity="1";
+								}
+							})
+
+
+						
+					</script>
+
+				</section>
+
+				
+
+				
+
+				
+								
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

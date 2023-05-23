@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodge Game</title>
+    <style>
+        #character {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        
+        .object {
+            position: absolute;
+            top: -50px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="character"></div>
+    <script>
+        // Character object
+        var character = document.getElementById('character');
+        var characterLeft = 50; // Initial position
+        var characterTop = 50; // Initial position
+        var characterSpeed = 10; // Movement speed
+        
+        // Object creation
+        var objects = [];
+        var objectSpeed = 5; // Object movement speed
+        var objectInterval = 1000; // Object spawn interval
+        
+        function createObject() {
+            var object = document.createElement('div');
+            object.classList.add('object');
+            object.style.left = Math.random() * 90 + '%'; // Random position
+            document.body.appendChild(object);
+            objects.push(object);
+        }
+        
+        function moveObjects() {
+            for (var i = 0; i < objects.length; i++) {
+                var object = objects[i];
+                var top = parseInt(object.style.top);
+                
+                if (top > window.innerHeight) {
+                    object.parentNode.removeChild(object);
+                    objects.splice(i, 1);
+                } else {
+                    object.style.top = (top + objectSpeed) + 'px';
+                    if (checkCollision(object)) {
+                        endGame();
+                    }
+                }
+            }
+        }
+        
+        function checkCollision(object) {
+            var characterRect = character.getBoundingClientRect();
+            var objectRect = object.getBoundingClientRect();
+            
+            return (
+                characterRect.top < objectRect.bottom &&
+                characterRect.bottom > objectRect.top &&
+                characterRect.left < objectRect.right &&
+                characterRect.right > objectRect.left
+            );
+        }
+        
+        function endGame() {
+            clearInterval(objectIntervalId);
+            document.removeEventListener('keydown', moveCharacter);
+            alert('Game Over!');
+        }
+        
+        function moveCharacter(event) {
+            var key = event.keyCode;
+            
+            switch (key) {
+                case 37: // Left arrow key
+                    characterLeft -= characterSpeed;
+                    break;
+                case 39: // Right arrow key
+                    characterLeft += characterSpeed;
+                    break;
+                case 38: // Up arrow key
+                    characterTop -= characterSpeed;
+                    break;
+                case 40: // Down arrow key
+                    characterTop += characterSpeed;
+                    break;
+            }
+            
+            character.style.left = characterLeft + 'px';
+            character.style.top = characterTop + 'px';
+        }
+        
+        // Event listeners
+        document.addEventListener('keydown', moveCharacter);
+        
+        // Game loop
+        var objectIntervalId = setInterval(function() {
+            createObject();
+        }, objectInterval);
+        
+        setInterval(function() {
+            moveObjects();
+        }, 50);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style type="text/css">
+			p{
+				background-color: rgba(0, 0, 0, .50);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><p>This is my final project</p></section>
+				<section><p>In class we were tasked with using a library called Reveal.js to make slide shows.</p></section>
+				<section><p>Originally I didn't have a topic that appealed to me. As a result, I just started playing around with the code that the base slides had.</p></section>
+				<section><p>I ended up just making more and more slides. I ended up with this </p></section>
+				<section><a href="index3.html"><center><div id="link" style="opacity: 1.0; width: 400px; height: 200px;">First slides</div></center></a></section>
+				<section>As you can see there is not that much going on and at this point it was not presentable to the class - We had to present in two days.</section>
+				<section>In reveal.js to go forward on the slides you only have to click a button. Which made my first slides pretty useless because you could hold down an arrow key and get through all of the slides very quickly</section>
+				<section>I decided to make a small puzzle on every slide and the reslut will be a number. You use that number at the end to unlock more slides.</section>
+				<!-- <section>I decided to make it a puzzle to eventually unlock this lock to reveal a codesketch</section> -->
+
+				<!-- <section><a href="finallock.html"><center><div id="link" style="opacity: 1.0; width: 400px; height: 200px;">Second slides</div></center></a></section> -->
+				<section><a href="index.html"><center><div id="link" style="opacity: 1.0; width: 400px; height: 200px;">Second slides</div></center></a></section>
+				<section>The most difficult thing was making the lock at the end</section>
+				<section data-background-size="contain" data-background-image="code.png"></section>
+				<!-- <section>This code for the lock is also used to unlock the final puzzle.</section> -->
+				<!-- <section><a href="index4.html"><center><div id="link" style="opacity: 1.0; width: 400px; height: 200px;">Second slides</div></center></a></section> -->
+
+
+				
+
+				
+
+				
+								
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
