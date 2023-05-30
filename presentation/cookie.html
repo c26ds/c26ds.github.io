@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		
+		#ball{
+			height: 25px;
+			width: 25px;
+			position: relative;
+			left: 400;
+			top: 300;
+			background-image: url(cookie.png.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation-name: throw;
+			animation-iteration-count: infinite;
+			animation-duration: 5s;
+			position: absolute;
+		}
+		@keyframes throw{
+			0%{
+				left: 1500px;
+				top: 225px;}
+			
+
+			100%{
+				left: 0px;
+				top: 225px;
+			}
+
+		}
+
+		#jacob{
+			height: 100px;
+			width: 50px;
+			position: relative;
+			left: 400px;
+			top: 200px;
+			background-image: url(stickfigure.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation-name: catch;
+			animation-iteration-count: infinite;
+			animation-duration: 5s;
+			position: absolute;
+
+
+		}
+		@keyframes catch{
+			0%{
+				left: 1500px;
+				top: 200px;
+
+
+			}
+			
+
+			100%{
+				left: 0px;
+				top: 200px;
+			}
+
+
+		}
+	</style>
+</head>
+<body>
+<div id="jacob"></div>
+<div id="ball"></div>
+</body>
+</html>
