@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daya's Website</title>
+	
+	<style type="text/css">
+		#box{
+			width: 100px;
+			height: 100px;
+			background-image: url(ufo.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			z-index: -1;
+			
+		}
+
+		body{
+
+			margin: 0px
+
+
+		}
+		.button{
+			width: 33%;
+			height: 100px;
+			display: inline-block;
+			font-size: 50px;
+			text-align: center;
+			color: purple;
+			background-color: black;
+
+
+		}
+		.button:hover{
+/*			background-color: royalblue;*/
+			transition: 2s;
+
+			background-color: rgba(50,0,200,0.2)
+
+		}
+
+		#field{
+			height: 800px;
+			width: 100%;
+			background-image: url(https://i.pinimg.com/originals/d8/10/f4/d810f4383399b5fbd0cb19a2c033d7d8.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+						background-size: cover;
+		z-index: -2;
+		position: absolute;
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div id="box"></div>
+
+
+	
+<a href="project.html">
+	<div class="button">projects</div>
+	</a>
+<a href="journal.html">    
+<div class="button">journal</div>
+</a>
+<a href="https://en.wikipedia.org/wiki/Indian_people">
+<div class="button">about me</div>
+</a>
+</div>
+
+<div id="dayas"></div>
+<div id="field">
+	</div>
+	
+	<script type="text/javascript">
+		document.addEventListener("mousemove", function(event){ 
+
+			box.style.left= event.clientX + "px";
+			box.style.top=event.clientY +"px";
+
+		})
+	</script>
+</body>
+</html>
